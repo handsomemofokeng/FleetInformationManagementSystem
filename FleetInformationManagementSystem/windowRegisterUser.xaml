@@ -1,0 +1,57 @@
+﻿<Window x:Name="windowRegUser" x:Class="FleetInformationManagementSystem.windowRegisterUser"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FleetInformationManagementSystem"
+        mc:Ignorable="d"
+        Title="User Registration" Height="695" Width="1140"
+        Background="DarkBlue" WindowStartupLocation="CenterScreen"
+       >
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="126" Margin="10,10,0,0" VerticalAlignment="Top" Width="129" Source="res/logo.jpg" Stretch="Fill"/>
+        <Viewbox Margin="144,190,42.6,42.6" Stretch="Fill">
+            <Grid Height="369" Width="1263">
+                <Label Content="First Name: " Grid.Row="0" Grid.Column="0" Grid.RowSpan="1" Height="48"  
+        			HorizontalAlignment="Left" x:Name="FirstName" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" Foreground="Gold" Width="245" />
+                <Label Content="Last Name: " Grid.Column="0" Grid.RowSpan="1" Height="51"
+        			HorizontalAlignment="Left" Margin="0,48,0,0" x:Name="LastName" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" Foreground="Gold" Width="245" />
+                <Label Content="Username (Email): " Grid.Column="0" Grid.RowSpan="1" Height="49"
+        			HorizontalAlignment="Left" Margin="0,99,0,0" x:Name="Email" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" Foreground="Gold" Width="245" />
+                <Label Content="Role: " Grid.Column="0" Grid.RowSpan="1" Height="51"
+        			HorizontalAlignment="Left" Margin="0,148,0,0" x:Name="Role" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" Foreground="Gold" Width="245" />
+                <Label Content="Password: " Grid.Column="0" Grid.RowSpan="1" Height="48"
+        			HorizontalAlignment="Left" Margin="0,199,0,0" x:Name="Password" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" Foreground="Gold" Width="245" />
+                <Label Content="Comfirm Password: " Grid.Column="0" Grid.RowSpan="1" Height="51"
+        			HorizontalAlignment="Left" Margin="0,247,0,0" x:Name="ConfirmPassword" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" Foreground="Gold" Width="361" />
+
+                <TextBox Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" x:Name="txtFirstName"         
+        			VerticalAlignment="Top" Height="39" Width="498" Margin="410,9,0,0" FontSize="24" />
+
+
+                <Button x:Name="btnCancel" Content="Done" HorizontalAlignment="Left" Margin="0,309,0,0" VerticalAlignment="Top" Width="361" Height="44" Style="{DynamicResource myButtonStyle}" Foreground="DarkBlue" Click="btnCancel_Click"/>
+                <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Margin="892,309,0,0" VerticalAlignment="Top" Width="361" Height="44" Style="{DynamicResource myButtonStyle}" Click="btnSubmit_Click"/>
+                <TextBox Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" x:Name="txtLastName"         
+        			VerticalAlignment="Top" Height="39" Width="498" Margin="410,55,0,0" FontSize="24"/>
+                <TextBox Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" x:Name="txtEmail"         
+        			VerticalAlignment="Top" Height="39" Width="498" Margin="410,101,0,0" FontSize="24"/>
+                <PasswordBox Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" x:Name="txtConfirm"         
+        			VerticalAlignment="Top" Height="40" Width="498" Margin="410,247,0,0" FontSize="24" />
+                <PasswordBox Grid.Row="0" Grid.RowSpan="1" HorizontalAlignment="Left" x:Name="txtPassword"         
+        			VerticalAlignment="Top" Height="39" Width="498" Margin="410,199,0,0" FontSize="24"/>
+                <ComboBox x:Name="cboRole" HorizontalAlignment="Left" Margin="411,145,0,0" VerticalAlignment="Top" Width="498" Height="46" FontSize="29.333">
+                    <ComboBoxItem Content="None" IsSelected="True"/>
+                    <ComboBoxItem Content="Admin"/>
+                    <ComboBoxItem Content="Data Capturer"/>
+                    <ComboBoxItem Content="Operator"/>
+                </ComboBox>
+                <Image x:Name="imgProfile" Source="res/upload_pic.png" Height="228"  Margin="914,55,10,0" VerticalAlignment="Top" />
+                <Button x:Name="btnProfilePicture" Content="Choose Profile Picture..." HorizontalAlignment="Left" Margin="913,4,0,0" VerticalAlignment="Top" Width="350" Height="44" Style="{DynamicResource myButtonStyle}" Click="btnProfilePicture_Click"/>
+
+            </Grid>
+        </Viewbox>
+        <Label x:Name="lblTitle" Content="Bonolo Trucking Company (BTC) Management System&#xD;&#xA;Register or Update User:" FontSize="36" Foreground="Gold" FontWeight="Bold" Margin="144,10,42.6,516" TextOptions.TextFormattingMode="Display" TextOptions.TextHintingMode="Animated" />
+
+    </Grid>
+
+</Window>

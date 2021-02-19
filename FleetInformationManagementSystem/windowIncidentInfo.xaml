@@ -1,0 +1,44 @@
+﻿<Window x:Class="FleetInformationManagementSystem.windowIncidentInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FleetInformationManagementSystem"
+        mc:Ignorable="d"
+        Title="Incident Info"  Height="695" Width="1140"
+        Background="DarkBlue" WindowStartupLocation="CenterScreen" BorderBrush="White" BorderThickness="2">
+    <Grid>
+        <Label Content="INCIDENT INFORMATION " Grid.Column="0" Grid.RowSpan="1" Height="45"
+    		HorizontalAlignment="Center" Margin="130,10,50,0" x:Name="Incident" VerticalAlignment="Top" FontSize="29.333" FontWeight="Bold" Foreground="Gold" Width="408" />
+        <Viewbox Margin="270,150,281.6,164.6" Stretch="Fill">
+            <Grid Height="347" Width="578">
+                <Label Content="Truck : " Grid.Column="0" Grid.RowSpan="1" Height="38"
+        			HorizontalAlignment="Left" Margin="0,51,0,0" x:Name="Truck" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" Foreground="Gold" Width="108" />
+                <Label Content="Driver : " Grid.Column="0" Grid.RowSpan="1" Height="40"
+        			HorizontalAlignment="Left" x:Name="Driver" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" Foreground="Gold" Width="123" />
+                <Label Content="Date of Incident: " Grid.Column="0" Grid.RowSpan="1" Height="38"
+        			HorizontalAlignment="Left" Margin="0,257,0,0" x:Name="DateOfPurchase" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" Foreground="Gold" Width="163" />
+
+                <Label Content="Location : " Grid.Column="0" Grid.RowSpan="1" Height="40"
+        			HorizontalAlignment="Left" Margin="0,100,0,0" x:Name="Location" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" Foreground="Gold" Width="123" />
+                <Label Content="Description: " Grid.Column="0" Grid.RowSpan="1" Height="40"
+        			HorizontalAlignment="Left" Margin="0,142,0,0" x:Name="Description" VerticalAlignment="Top" FontSize="18.667" FontWeight="Bold" Foreground="Gold" Width="123" />
+                <TextBox HorizontalAlignment="Left" x:Name="txtLocation"  
+        			VerticalAlignment="Top"  Height="31" Width="401" Margin="177,100,0,0" FontSize="24"/>
+                <TextBox HorizontalAlignment="Left" x:Name="txtDescription"  
+        			VerticalAlignment="Top"  Height="114" Width="401" Margin="177,138,0,0" FontSize="24"/>
+                <DatePicker x:Name="dtIncidentDate"  HorizontalAlignment="Left" Margin="177,265,0,0" VerticalAlignment="Top" Width="234"/>
+
+                <Button x:Name="btnSubmitIncident" Content="SAVE" HorizontalAlignment="Left" Margin="433,305,0,0" VerticalAlignment="Top" Width="145" Height="32" Style="{DynamicResource myButtonStyle}" Click="btnIncident_Click" RenderTransformOrigin="1.405,7.567"/>
+                <Button x:Name="btnDone" Content="Done" HorizontalAlignment="Left" Margin="10,305,0,0" VerticalAlignment="Top" Width="145" Height="32" Style="{DynamicResource myButtonStyle}" RenderTransformOrigin="1.405,7.567" Click="btnDone_Click"/>
+                <ComboBox x:Name="cboDriver" HorizontalAlignment="Left" Margin="177,10,0,0" VerticalAlignment="Top" Width="401" Height="38" FontSize="20">
+                    <ComboBoxItem Content="Select Driver" IsSelected="True"/>
+                    
+                </ComboBox>
+                <ComboBox x:Name="cboTruck" HorizontalAlignment="Left" Margin="177,54,0,0" VerticalAlignment="Top" Width="401" Height="38" FontSize="20">
+                    <ComboBoxItem Content="Select Truck" IsSelected="True"/>
+                </ComboBox>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>
